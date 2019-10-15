@@ -3,7 +3,8 @@ import React from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import { CHANGE_TAB } from '../../constants/actionTypes';
-
+import RowLinks from './../Navbar/RowLinks'
+import ModalPhoto from './../Modal'
 const YourFeedTab = props => {
   if (props.token) {
     const clickHandler = ev => {
@@ -69,6 +70,8 @@ const MainView = props => {
   return (
     <div className="col-md-9">
       <div className="feed-toggle">
+      <RowLinks/>
+          <ModalPhoto/>
         <ul className="nav nav-pills outline-active">
           <YourFeedTab
             token={props.token}

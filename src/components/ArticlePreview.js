@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import agent from '../agent';
 import { connect } from 'react-redux';
 import { ARTICLE_FAVORITED, ARTICLE_UNFAVORITED } from '../constants/actionTypes';
+import { randomBytes } from 'crypto';
 
 const FAVORITED_CLASS = 'btn btn-sm btn-primary';
 const NOT_FAVORITED_CLASS = 'btn btn-sm btn-outline-primary';
@@ -34,10 +35,11 @@ const ArticlePreview = props => {
   };
 
   return (
-      <div class = "col-3 p-2">
+      <div class = "item">
         <Link to={`/article/${article.slug}`} className="preview-link">
-          <img class = "img-fluid" src = "https://picsum.photos/300/300"></img>
+          <img class = "img-fluid" src = "https://source.unsplash.com/random"></img>
         </Link>
+       
       </div>
   );
 }

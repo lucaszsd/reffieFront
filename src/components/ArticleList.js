@@ -18,9 +18,9 @@ const ArticleList = props => {
   }
 
   return (
-    <div class = "container-fluid">
+    <div class = "masonry">
 
-      <div class = "container d-flex">
+      <div class = "grid js-masonry">
         {
           props.articles.map(article => {
             return (

@@ -3,6 +3,7 @@ import ListErrors from './ListErrors';
 import React from 'react';
 import agent from '../agent';
 import { connect } from 'react-redux';
+import { Row, Col } from 'antd';
 import {
   UPDATE_FIELD_AUTH,
   REGISTER,
@@ -50,15 +51,14 @@ class Register extends React.Component {
     return (
       <div className="auth-page">
         <div className="container page">
-          <div className="row">
-
-            <div className="col-md-6 offset-md-3 col-xs-12">
-              <h1 className="text-xs-center">Sign Up</h1>
-              <p className="text-xs-center">
-                <Link to="/login">
-                  Have an account?
-                </Link>
-              </p>
+          <Row type="flex" justify="center" align="top">
+          <Col span={12}>
+            <h1>Reffie</h1>
+          </Col>
+          <Col span={12}>
+      
+              <h1 className="text-xs-center">Crie sua conta</h1>
+              
 
               <ListErrors errors={this.props.errors} />
 
@@ -69,7 +69,7 @@ class Register extends React.Component {
                     <input
                       className="form-control form-control-lg"
                       type="text"
-                      placeholder="Username"
+                      placeholder="Nome de usuário"
                       value={this.props.username}
                       onChange={this.changeUsername} />
                   </fieldset>
@@ -87,23 +87,44 @@ class Register extends React.Component {
                     <input
                       className="form-control form-control-lg"
                       type="password"
-                      placeholder="Password"
+                      placeholder="Senha"
                       value={this.props.password}
                       onChange={this.changePassword} />
                   </fieldset>
 
+                  <fieldset className="form-group">
+                    <input
+                      className="form-control form-control-lg"
+                      type="password"
+                      placeholder="Repetir senha"
+                      value={this.props.password}
+                      onChange={this.changePassword} />
+                  </fieldset>
                   <button
                     className="btn btn-lg btn-primary pull-xs-right"
                     type="submit"
                     disabled={this.props.inProgress}>
                     Sign up
                   </button>
+                  <button
+                    className="btn btn-lg  pull-xs-left"
+                    type="submit"
+                    disabled={this.props.inProgress}>
+                    Cancel
+                  </button>
+                 
 
                 </fieldset>
               </form>
-            </div>
+              <p className="text-xs-center">
+                Já possui uma conta?
+                <Link to="/login">
+                   Entre
+                </Link>
+              </p>
+              </Col>
 
-          </div>
+            </Row>
         </div>
       </div>
     );

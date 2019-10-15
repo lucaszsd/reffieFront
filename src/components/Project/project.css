@@ -1,0 +1,85 @@
+.dark-bg{
+    background-color: #3F3D3C;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+h1.title{
+    border-bottom: 2px solid #CC474E;
+    padding-top: 50px;
+}
+
+.btn-new-project{
+    margin-top: 25px;
+}
+
+.title-margin{
+    margin-left: 25px;
+}
+
+.card{
+    background-color: white;
+    margin: 200px;
+}
+
+.card-title{
+    background-color: white;
+}
+
+.card-footer{
+    background-color: white;
+}
+
+.text{
+    
+}
+
+.info{
+    margin: 0;
+}
+
+
+.project-title{
+    border-bottom: 2px solid #CC474E;
+    padding-top: 50px;
+}
+
+.projects-section{
+    width: 100%;
+}
+
+.project-preview{
+    margin: 20px;
+}
+
+.project-preview-image{
+    padding: 5px;
+}
+
+.project-preview-title{
+    padding: 5px;
+}
+
+.project-preview-photo-count{
+    color: #CC474E;
+}
+
+.project-preview-description{
+    padding: 5px;
+}
+
+.content{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar{
+    margin-right: 5px;
+}
+
+

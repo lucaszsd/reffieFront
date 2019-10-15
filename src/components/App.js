@@ -16,10 +16,9 @@ import Settings from '../components/Settings';
 import { store } from '../store';
 import { push } from 'react-router-redux';
 
+import Projects from './Project/ProjectsPage';
 
-
-import RowLinks from './Navbar/RowLinks';
-import ModalPhoto from './Modal';
+import Project from './Project/Project'
 import Navbar from './Navbar/Navbar';
 const mapStateToProps = state => {
   return {
@@ -59,12 +58,14 @@ class App extends React.Component {
       return (
         <div>
           <Navbar/>
-          <RowLinks/>
-          <ModalPhoto/>
+         
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/project" component={Project} />
+            <Route path="/project/:slug" component={Project} />
             <Route path="/editor/:slug" component={Editor} />
             <Route path="/editor" component={Editor} />
             <Route path="/article/:id" component={Article} />
@@ -73,7 +74,7 @@ class App extends React.Component {
             <Route path="/@:username/favorites" component={ProfileFavorites} />
             <Route path="/@:username" component={Profile} />
           </Switch>
-        </div>
+          </div>
       );
     }
     return (

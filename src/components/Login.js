@@ -44,14 +44,12 @@ class Login extends React.Component {
       <div className="auth-page">
         <div className="container page">
           <div className="row">
+          <div className="col-md-6 offset-md-3 col-xs-12">
 
+          </div>
             <div className="col-md-6 offset-md-3 col-xs-12">
-              <h1 className="text-xs-center">Sign In</h1>
-              <p className="text-xs-center">
-                <Link to="/register">
-                  Need an account?
-                </Link>
-              </p>
+              <h1 className="text-xs-center">Acesse sua conta</h1>
+              
 
               <ListErrors errors={this.props.errors} />
 
@@ -62,7 +60,7 @@ class Login extends React.Component {
                     <input
                       className="form-control form-control-lg"
                       type="email"
-                      placeholder="Email"
+                      placeholder="Usuario ou email"
                       value={email}
                       onChange={this.changeEmail} />
                   </fieldset>
@@ -71,7 +69,7 @@ class Login extends React.Component {
                     <input
                       className="form-control form-control-lg"
                       type="password"
-                      placeholder="Password"
+                      placeholder="Senha"
                       value={password}
                       onChange={this.changePassword} />
                   </fieldset>
@@ -85,6 +83,12 @@ class Login extends React.Component {
 
                 </fieldset>
               </form>
+              <p className="text-xs-center">
+                Não possui uma conta?
+                <Link to="/register">
+                  Registrar
+                </Link>
+              </p>
             </div>
 
           </div>

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Row , Menu,  } from 'antd';
-
-
+import { Row} from 'antd';
 class RowLinks extends React.Component {
 
 state = {
@@ -17,19 +15,19 @@ state = {
   render() {
     return (
     
-      <div class = "categories">
+      <Row className = "categories" type="flex" justify="space-around">
         <div class = "rowlinks">
-            <a href = "#">Tudo</a>
-            <a href = "#">Estar</a>
-            <a href = "#">Jantar</a>
-            <a href = "#">Cozinha</a>
-            <a href = "#">Escritório</a>
-            <a href = "#">Instalações</a>
-            <a href = "#">Casas</a>
-            <a href = "#">Apartamentos</a>
-            <a href = "#">Lofts</a>     
+            <a href = "#">TUDO</a>   
+            <a href = "#">ESTAR</a>
+            <a href = "#">JANTAR</a>
+            <a href = "#">COZINHA</a>
+            <a href = "#">ESCRITÓRIO</a>
+            <a href = "#">INSTALAÇÕES</a>
+            <a href = "#">CASAS</a>
+            <a href = "#">APARTAMENTOS</a>
+            <a href = "#">LOFTS</a>     
         </div>
-      </div>
+      </Row>
         
     );
   }
