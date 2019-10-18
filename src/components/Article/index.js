@@ -4,15 +4,15 @@ import agent from '../../agent';
 import { connect } from 'react-redux';
 import marked from 'marked';
 import { ARTICLE_PAGE_LOADED, ARTICLE_PAGE_UNLOADED } from '../../constants/actionTypes';
-import NavPartner from '../NavPartner';
+import NavPartner from './NavPartner';
 
 
-import ModalProductCarousel from '../ModalProductCarousel';
-import ModalHeadCarousel from '../ModalHeadCarousel';
-import Products from '../Products';
-import ProductDescription from '../ProductDescription';
+import ModalProductCarousel from './ModalProductCarousel';
+import ModalHeadCarousel from './ModalHeadCarousel';
+import Products from './Products';
+import ProductDescription from './ProductDescription';
 import RelatedImages from './RelatedImages';
-
+import {Col, Row} from 'antd';
 
 const mapStateToProps = state => ({
   ...state.article,
@@ -47,77 +47,33 @@ class Article extends React.Component {
     const canModify = this.props.currentUser &&
       this.props.currentUser.username === this.props.article.author.username;
     return (
-      
-      <div class = "container-fluid">
-        <div class = "container">
+      <div>
+
           <NavPartner/>
-        </div>
-         
-        <div>
-          <ModalHeadCarousel/>
-          <div class = "row">
-            <div class = "col-4">
-              <ModalProductCarousel/>
-            </div>
-            <div class = "col-4">
-              <ProductDescription/>
-            </div>
-            <div class = "col-4">
-              <Products/>
-            </div>
-          </div>
           
-        </div>
-
-        <div>
+          <Row type="flex" justify="space-around">
+            <ModalHeadCarousel/>
+          </Row>
+          <Row>
+            <h2 class = "description-info">Itens na imagem</h2>
+          </Row>
+          <Row className = "description-info" type="flex" justify="space-around">
+            <Col span = {6}>
+             
+              <ModalProductCarousel/>
+            </Col>
+            <Col span = {7}>
+              <ProductDescription/>
+              </Col>
+            <Col span = {7}>
+              <Products/>
+              </Col>
+          </Row>
+          
+          <Row>
+            <h2 class = "description-info">Itens na imagem</h2>
+          </Row>
           <RelatedImages/>
-        </div>
-
-        <div className="article-page">
-         
-          <div className="banner">
-            <div className="container">
-
-              <h1>{this.props.article.title}</h1>
-              <ArticleMeta
-                article={this.props.article}
-                canModify={canModify} />
-
-            </div>
-          </div>
-
-          <div className="container page">
-
-            <div className="row article-content">
-              <div className="col-xs-12">
-
-                <div dangerouslySetInnerHTML={markup}></div>
-
-                <ul className="tag-list">
-                  {
-                    this.props.article.tagList.map(tag => {
-                      return (
-                        <li
-                          className="tag-default tag-pill tag-outline"
-                          key={tag}>
-                          {tag}
-                        </li>
-                      );
-                    })
-                  }
-                </ul>
-
-              </div>
-            </div>
-
-            <hr />
-
-            <div className="article-actions">
-            </div>
-
-            
-          </div>
-        </div>
       </div>
     );
   }

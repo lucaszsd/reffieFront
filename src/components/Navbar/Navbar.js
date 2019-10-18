@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LeftMenu from './LeftMenu'
 import RightMenu from './RightMenu'
-import { Drawer, Button } from 'antd';
+import { Drawer, Button, Row } from 'antd';
 import Styles from './menu.css';
 class Navbar extends Component {
 	state = {
@@ -23,6 +23,9 @@ class Navbar extends Component {
   render() {
     return (
         <nav className="menuBar">
+			<Row>
+
+			
         	<div className="logo">
         		<a href="/"><img src="https://source.unsplash.com/random/150x40" alt=""></img></a>
         	</div>
@@ -48,6 +51,7 @@ class Navbar extends Component {
 		        </Drawer>
 
         	</div>
+			</Row>
         </nav>
     );
   }

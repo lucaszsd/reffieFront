@@ -6,23 +6,32 @@ const Projects = props => {
       return (
         <div>
           
-          <Row  >
-            <Col className = "title-margin" span={12} >
+
+          <div  class = "container ">
+          <Row>
+            <Col span={12} >
               <h1 class = "title" >Meus Projetos</h1>
               <Button className = "btn-new-project" type="primary" icon="plus" onClick={this.enterIconLoading}>Novo Projeto</Button>
+
+
             </Col>
+          
           </Row>
-            
+</div>
+        
           
          
          
             <div class = "js-masonry">
-              <div className ="projects-section">
-                <Project/>
-                <Project/>
-                <Project/>
-                <Project/>
-              </div>
+              <Row className = "content" type="flex" justify="center">
+                  <Project/>
+                  <Project/>
+                  <Project/>
+                  <Project/>
+                  <Project/>
+                  <Project/>
+              </Row>
+              
             </div>
         </div>  
       );

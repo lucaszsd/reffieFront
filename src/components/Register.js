@@ -9,7 +9,7 @@ import {
   REGISTER,
   REGISTER_PAGE_UNLOADED
 } from '../constants/actionTypes';
-
+import Style from './register.css';
 const mapStateToProps = state => ({ ...state.auth });
 
 const mapDispatchToProps = dispatch => ({
@@ -50,82 +50,95 @@ class Register extends React.Component {
 
     return (
       <div className="auth-page">
-        <div className="container page">
-          <Row type="flex" justify="center" align="top">
+        
+        <Row type="flex" justify="center" align="center">
+          <div class = "side-banner">
+            <Col span={12}>
+              <Row type="flex" justify="center" align="center">
+                <h1>Reffie</h1>
+              </Row>
+            </Col>
+          </div>
+          
           <Col span={12}>
-            <h1>Reffie</h1>
-          </Col>
-          <Col span={12}>
-      
-              <h1 className="text-xs-center">Crie sua conta</h1>
-              
+            <Row  type="flex" justify="center"  align="middle">
+              <Col span = {8}>
+                <h1 className="text-xs-center">Crie sua conta</h1>
+                
 
-              <ListErrors errors={this.props.errors} />
+                <ListErrors errors={this.props.errors} />
 
-              <form onSubmit={this.submitForm(username, email, password)}>
-                <fieldset>
+                <form onSubmit={this.submitForm(username, email, password)}>
+                  <fieldset>
 
-                  <fieldset className="form-group">
-                    <input
-                      className="form-control form-control-lg"
-                      type="text"
-                      placeholder="Nome de usuário"
-                      value={this.props.username}
-                      onChange={this.changeUsername} />
+                    <fieldset className="form-group">
+                      <label>Nome de Usuário</label>
+                      <input
+                        className="form-control form-control-lg"
+                        type="text"
+                        placeholder="Nome de usuário"
+                        value={this.props.username}
+                        onChange={this.changeUsername} />
+                    </fieldset>
+
+                    <fieldset className="form-group">
+                      <label>Email</label>
+                      <input
+                        className="form-control form-control-lg"
+                        type="email"
+                        placeholder="Email"
+                        value={this.props.email}
+                        onChange={this.changeEmail} />
+                    </fieldset>
+
+                    <fieldset className="form-group">
+                      <label>Senha</label>
+                      <input
+                        className="form-control form-control-lg"
+                        type="password"
+                        placeholder="Senha"
+                        value={this.props.password}
+                        onChange={this.changePassword} />
+                    </fieldset>
+
+                    <fieldset className="form-group">
+                    <label>Repetir Senha</label>
+                      <input
+                        className="form-control form-control-lg"
+                        type="password"
+                        placeholder="Repetir senha"
+                        value={this.props.password}
+                        onChange={this.changePassword} />
+                    </fieldset>
+                    <button
+                      className="btn btn-lg btn-primary pull-xs-right"
+                      type="submit"
+                      disabled={this.props.inProgress}>
+                      Sign up
+                    </button>
+                    <button
+                      className="btn btn-lg  pull-xs-left"
+                      type="submit"
+                      disabled={this.props.inProgress}>
+                      Cancel
+                    </button>
+                  
+
                   </fieldset>
-
-                  <fieldset className="form-group">
-                    <input
-                      className="form-control form-control-lg"
-                      type="email"
-                      placeholder="Email"
-                      value={this.props.email}
-                      onChange={this.changeEmail} />
-                  </fieldset>
-
-                  <fieldset className="form-group">
-                    <input
-                      className="form-control form-control-lg"
-                      type="password"
-                      placeholder="Senha"
-                      value={this.props.password}
-                      onChange={this.changePassword} />
-                  </fieldset>
-
-                  <fieldset className="form-group">
-                    <input
-                      className="form-control form-control-lg"
-                      type="password"
-                      placeholder="Repetir senha"
-                      value={this.props.password}
-                      onChange={this.changePassword} />
-                  </fieldset>
-                  <button
-                    className="btn btn-lg btn-primary pull-xs-right"
-                    type="submit"
-                    disabled={this.props.inProgress}>
-                    Sign up
-                  </button>
-                  <button
-                    className="btn btn-lg  pull-xs-left"
-                    type="submit"
-                    disabled={this.props.inProgress}>
-                    Cancel
-                  </button>
-                 
-
-                </fieldset>
-              </form>
-              <p className="text-xs-center">
-                Já possui uma conta?
-                <Link to="/login">
-                   Entre
-                </Link>
-              </p>
+                </form>
+                <p className="text-xs-center">
+                  Já possui uma conta?
+                  <Link to="/login">
+                    Entre
+                  </Link>
+                </p>
+              </Col>
+            </Row>
+             
               </Col>
 
             </Row>
-        </div>
+       
       </div>
     );
   }

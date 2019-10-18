@@ -49,7 +49,7 @@ h1.title{
 }
 
 .projects-section{
-    width: 100%;
+ 
 }
 
 .project-preview{
@@ -73,9 +73,7 @@ h1.title{
 }
 
 .content{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 100px;
 }
 
 .avatar{

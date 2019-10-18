@@ -1,0 +1,73 @@
+.description-price{
+    font-size: 30px;
+    color: #3398F4;
+}
+
+.description-partner-logo{
+    margin-top: 50px;
+    margin-bottom: 25px
+}
+
+.description-links{
+    margin-right: 20px;
+    font-size: 15px;
+    color: #0A78CC;
+
+}
+
+.description-links:hover{
+    color: #3398F4;
+}
+
+div.description-info{
+    margin-top: 40px;
+}
+
+h2.description-info{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.description-main{
+    margin-top: 35px;
+}
+
+.description-products-list{
+    overflow: scroll; 
+    overflow-x: hidden;
+    height: 400px;    
+}
+
+.description-products-list > .ant-row-flex{
+    margin-bottom: 30px;
+}
+
+.description-product{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+.description-product:hover{
+    border: 1px solid #3398F4;
+}
+
+.description-products-list::-webkit-scrollbar { width:10px; background:#e3e0d6; } /* configurando scroll */
+.description-products-list::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+.description-products-list::-webkit-scrollbar-thumb { border-radius:10px; background:#8b8778;  }
+
+
+
+/*Demo carousel*/
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }

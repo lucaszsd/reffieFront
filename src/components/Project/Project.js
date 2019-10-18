@@ -24,6 +24,7 @@ const Projects = props => {
           <RowLinks/>
           <div class = "js-masonry">
             <div className ="dark-bg">
+              <div class = "content">
                 <Photo/>
                 <Photo/>
                 <Photo/>
@@ -32,6 +33,7 @@ const Projects = props => {
                 <Photo/>
                 <Photo/>
                 <Photo/>
+              </div>
             </div>
           </div>
         </div>  

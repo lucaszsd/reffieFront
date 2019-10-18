@@ -1,6 +1,7 @@
 import ArticlePreview from './ArticlePreview';
 import ListPagination from './ListPagination';
 import React from 'react';
+import Mansory from './mansory.css'
 
 const ArticleList = props => {
   if (!props.articles) {

@@ -2,7 +2,7 @@
 
 .menuBar{
     padding: 0 20px;
-    border-bottom: solid 1px #e8e8e8;
+    border-bottom: solid 1px white;
     overflow: auto;
     /*box-shadow: 0 0 30px #f3f1f1;*/
   }
@@ -10,6 +10,7 @@
   .logo{
     width: 150px;
     float: left;
+    margin-right: 20pxs;
   }
   
   .logo a{
@@ -37,6 +38,9 @@
   }
   .menuCon .leftMenu{
     float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+    
   }
   .menuCon .rightMenu{
     float: right;
@@ -84,14 +88,12 @@
   }
   
 a.nav-link{
-  margin-top: 0px;
+  margin-top: -8px;
   padding-bottom: 20px;
+  font-weight: bold;
+  padding-top: 0 !important;
 }
 
-ant-menu-item-active{
-  border: 2px solid #1890ff;
-  font-weight: bold;
-}
 
 .ant-btn{
   margin-bottom: 20px;
@@ -104,6 +106,7 @@ ant-menu-item-active{
     }
     .leftMenu,.rightMenu{
       display: none;
+
     }
     .logo a{
       margin-left: -20px;
@@ -137,11 +140,21 @@ ant-menu-item-active{
   
   }
   
+  
+  .ant-menu-item > a{
+    color: rgba(10, 120, 204, 0.5) ;
+  }
+
+  .ant-menu-item{
+    height: 50px;
+  }
+
   .ant-input{
-    margin-top: 10px;
     border: 2px solid #0A78CC;
     border-radius: 4px;
   }
+
+
 
   .ant-input:hover{
     border: 2px solid #3398F4;
@@ -154,9 +167,29 @@ ant-menu-item-active{
 
   .menu-item{
     margin-right: 20px;
+    margin-top: 15px;
   }
 
+  .ant-menu-item-selected{
+    font-weight:bold;
+    border-bottom: 2px solid white !important;
+  }
+
+  .ant-menu-item-active{
+    font-weight:bold;
+    border-bottom: 2px solid white !important;
+    color: red !important;
+  }
+
+ 
+  .ant-menu-item-active{
+    color: #0A78CC !important;
+  }
+  
+
+
   .ant-divider-vertical{
+    margin-top: 0px;
     width: 2px;
     height: 30px;
     background-color: #0A78CC;

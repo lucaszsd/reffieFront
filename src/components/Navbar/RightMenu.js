@@ -1,13 +1,33 @@
 import React, { Component } from 'react';
-import { Menu, Avatar, Badge, Popover, Icon, Button, Divider } from 'antd';
+import { Menu, Avatar, Badge, Popover, Icon, Button, Divider, Dropdown, message } from 'antd';
 import { Link } from 'react-router-dom';
-
+import Notification from './Notification';
 const text = <span>Title</span>;
 const content = (
   <div>
     <p>Content</p>
     <p>Content</p>
   </div>
+);
+
+
+function handleMenuClick(e) {
+  message.info('Abrir notificação');
+  console.log('click', e);
+}
+
+const menu = (
+  <Menu onClick={handleMenuClick}>
+    <Menu.Item key="1">
+      <Notification/>
+    </Menu.Item>
+    <Menu.Item key="2">
+    <Notification/>
+    </Menu.Item>
+    <Menu.Item key="3">
+    <Notification/>
+    </Menu.Item>
+  </Menu>
 );
 
 
@@ -34,16 +54,18 @@ class RightMenu extends Component {
         </Menu.Item>
 
 
-            <Button type="primary">
+            <Button class = "menu-item" type="primary">
                 LOGIN
             </Button>
-    
-        
-        <Popover placement="bottom" title={text} content={content} trigger="click">
+
+            <Dropdown overlay = {menu}  trigger={['click']}>
             <Badge  className = "menu-item" dot>
               <Icon style={{ fontSize: '30px', color: '#0A78CC' }}   type="bell" />
             </Badge>
-        </Popover>
+    </Dropdown>
+    
+        
+        
         <Avatar size={30} src="https://source.unsplash.com/user/erondu" />
       </Menu>
       

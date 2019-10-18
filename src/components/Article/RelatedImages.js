@@ -1,35 +1,30 @@
+import { Col, Row } from 'antd';
 import React from 'react';
 const RelatedImages = props => {
   if (!props.articles) {
     return (
-        <div>
-            <h2>Imagens Relacionadas</h2>
-            <div class = "container-fluid">
-                <div class = "row">
-                    <div class = "col-3">
-                        <a href = "#">
-                            <img class = "img-fluid" src="http://placehold.it/400x400" alt=""></img>
-                        </a>
-                    </div>
-                    <div class = "col-3">
-                        <a href = "#">
-                            <img class = "img-fluid" src="http://placehold.it/400x400" alt=""></img>
-                        </a>
-                    </div>
-                    <div class = "col-3">
-                        <a href = "#">
-                            <img class = "img-fluid" src="http://placehold.it/400x400" alt=""></img>
-                        </a>
-                    </div>
-                    <div class = "col-3">
-                        <a href = "#">
-                            <img class = "img-fluid" src="http://placehold.it/400x400" alt=""></img>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+        <Row type = "flex" justify = "space-around">
+            <Col span = {5}>
+                <a href = "#">
+                    <img class = "img-fluid" src="https://source.unsplash.com/random/400x400?kitchen" alt=""></img>
+                </a>
+            </Col>
+            <Col span = {5}>
+                <a href = "#">
+                    <img class = "img-fluid" src="https://source.unsplash.com/random/400x400?bedroom" alt=""></img>
+                </a>
+            </Col>
+            <Col span = {5}>
+                <a href = "#">
+                    <img class = "img-fluid" src="https://source.unsplash.com/random/400x400?living+room" alt=""></img>
+                </a>
+            </Col>
+            <Col span = {5}>
+                <a href = "#">
+                    <img class = "img-fluid" src="https://source.unsplash.com/random/400x400?washroom" alt=""></img>
+                </a>
+            </Col>
+        </Row>
         );
     }
 };
